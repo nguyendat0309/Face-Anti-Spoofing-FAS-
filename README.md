@@ -39,7 +39,7 @@ During inference, the SupCon projection head is not used. It is only used during
 The experiments compare baseline models with improved variants using GeM, CBAM, and SupCon. The best performance is achieved when these components are combined.
 
 <p align="center">
-  <img src="assets/results_comparison.png" width="850">
+  <img src="/assets/result_comparison.png" width="850">
 </p>
 
 <p align="center">
