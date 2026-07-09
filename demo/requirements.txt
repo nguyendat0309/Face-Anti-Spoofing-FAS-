@@ -1,0 +1,13 @@
+torch
+torchvision
+opencv-python
+numpy<2
+pillow
+pyyaml
+tqdm
+pandas
+gradio
+mediapipe
+insightface
+onnxruntime
+imageio-ffmpeg

@@ -1,0 +1,5 @@
+Put your fine-tuned Face Anti-Spoofing checkpoint here if you want to keep it inside this project.
+
+Then update config.yaml:
+
+checkpoint_path: "checkpoints/your_checkpoint.pth"

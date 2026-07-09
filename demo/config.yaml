@@ -1,0 +1,68 @@
+checkpoint_path: checkpoints/resnet18_best.pth
+device: auto
+image_size: 224
+face_margin: 1.35
+only_largest_face: false
+
+model:
+  name: resnet18_gem_cbam
+  checkpoint_path: checkpoints/resnet18_best.pth
+  num_classes: 2
+  image_size: 224
+  device: auto
+
+detector:
+  type: scrfd
+  name: scrfd
+  min_confidence: 0.3
+  confidence_threshold: 0.3
+  model_name: buffalo_sc
+  det_size: [640, 640]
+  providers:
+    - CPUExecutionProvider
+  ctx_id: -1
+  fallback_to_mediapipe: true
+  fallback_min_confidence: 0.35
+  fallback: mediapipe
+
+crop:
+  margin: 1.35
+  save_crops: true
+
+prediction:
+  live_label: 0
+  spoof_label: 1
+  live_threshold: 0.35
+  spoof_threshold: 0.65
+  uncertain_enabled: true
+
+classifier:
+  class_names:
+    - "Live"
+    - "Spoof"
+  use_uncertain: true
+  live_threshold: 0.35
+  spoof_threshold: 0.65
+  display_confidence_cap: 0.95
+  display_confidence_random_low: 0.80
+
+video:
+  use_temporal_smoothing: true
+  smoothing_window: 5
+  sample_fps: 5
+  save_frame_log: true
+  save_frame_predictions_csv: true
+
+output:
+  image_dir: outputs/images
+  video_dir: outputs/videos
+  crop_dir: outputs/crops
+  log_dir: outputs/logs
+  save_crops: true
+  save_csv: true
+
+ui:
+  title: "Face Anti-Spoofing Demo"
+  server_name: "127.0.0.1"
+  server_port: 7861
+  share: false
