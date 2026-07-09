@@ -13,7 +13,7 @@ The main dataset used in this project is a balanced subset of **CelebA-Spoof**.
 The dataset is used for training, validation, and testing. It contains both **live** and **spoof** face samples. The spoof samples include several common attack types, such as print attack, replay attack, paper cut attack, and 3D mask attack.
 
 <p align="center">
-  <img src="./assets/dataset_examples.jpg" width="850">
+  <img src="./assets/dataset_examples.jpg" width="850"/>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ During inference, the SupCon projection head is not used. It is only used during
 The experiments compare baseline models with improved variants using GeM, CBAM, and SupCon. The best performance is achieved when these components are combined.
 
 <p align="center">
-  <img src="./assets/result_comparison.png" width="850">
+  <img src="./assets/result_comparison.png" width="850"/>
 </p>
 
 <p align="center">
@@ -63,7 +63,7 @@ Input image/video
 ```
 
 <p align="center">
-  <img src="assets/demo_video.gif" width="850">
+  <img src="assets/demo_video.gif" width="850"/>
 </p>
 
 <p align="center">
