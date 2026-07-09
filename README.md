@@ -13,7 +13,7 @@ The main dataset used in this project is a balanced subset of **CelebA-Spoof**.
 The dataset is used for training, validation, and testing. It contains both **live** and **spoof** face samples. The spoof samples include several common attack types, such as print attack, replay attack, paper cut attack, and 3D mask attack.
 
 <p align="center">
-  <img src="assets/dataset_examples.png" width="850">
+  <img src="assets/dataset_examples.jpg" width="850">
 </p>
 
 <p align="center">
@@ -158,10 +158,6 @@ assets/
 └── demo_video.gif
 ```
 
-If `demo_video.gif` is not available yet, add it manually after exporting a short demo video result.
-
----
-
 ## Checkpoint
 
 The main checkpoint for demo inference should be placed at:
@@ -169,10 +165,6 @@ The main checkpoint for demo inference should be placed at:
 ```text
 demo/checkpoints/resnet18_best.pth
 ```
-
-Large files such as model checkpoints, output videos, crops, and logs should not be committed to Git.
-
----
 
 ## Project Status
 
